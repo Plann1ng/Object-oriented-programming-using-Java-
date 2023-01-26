@@ -31,3 +31,17 @@ public class Gamesrp {
         /* Checks all possibilities when user choise is 1 and increments
          * the score correspondingly
          */
+        if (finalchoice == 1 && computer == 1) {
+
+            System.out.println("It is a draw, Computer had scissor also!");
+            draw += 1;
+          } else if (finalchoice == 1 && computer == 2) {
+      
+            System.out.println("It is a lose, Computer had rock!");
+    
+            comptr += 1;
+          } else if (finalchoice == 1 && computer == 3) {
+      
+            System.out.println("It is a win, computer had paper");
+    
+            you += 1;
