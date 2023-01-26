@@ -151,3 +151,19 @@ public class Nine {
             System.out.println("\nIt is a draw!\n");
 
           }
+                    // Computer rolls twice
+        } else if (comp <= 4) {
+
+            int comp2 = dice.nextInt(1, 3);
+            int computer = comp + comp2;
+            System.out.print("\nYour rolled " + player);
+            System.out.print(", in total you have " + player + "\n");
+            // Validation for limitations
+            if (player <= 9 && computer <= 9) {
+              // User loses
+              if (player < computer) {
+  
+                System.out.println("\nComputer rolled " + comp);
+                System.out.print("Computer rolls again and gets " + comp2);
+                System.out.print(", Computer got " + computer + " in total.\n");
+                System.out.println("\nYou lost!\n");
