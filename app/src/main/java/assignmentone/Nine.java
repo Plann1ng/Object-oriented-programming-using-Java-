@@ -122,3 +122,7 @@ public class Nine {
 
           }
         }
+        // If user does not starts the game
+    } else if (variableplay.equals("N")) {
+
+        System.out.println("\nSee you next times!\n");
