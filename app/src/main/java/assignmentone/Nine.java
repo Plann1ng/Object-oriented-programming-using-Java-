@@ -86,3 +86,13 @@ public class Nine {
             if (finalvalue > 9) {
   
               System.out.println("\nfat!\n");
+
+                    // Validating that both participants are below 9
+                } else if (finalvalue <= 9 && computer <= 9) {
+                    // User loses
+                    if (finalvalue < computer) {
+        
+                      System.out.println("\nComputer rolled " + comp);
+                      System.out.print("Computer rolls again and gets " + comp2);
+                      System.out.print(", Computer got " + computer + " in total.\n");
+                      System.out.println("\nYou lost!\n");
