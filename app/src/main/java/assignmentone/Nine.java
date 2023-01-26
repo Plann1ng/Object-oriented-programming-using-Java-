@@ -17,3 +17,11 @@ public class Nine {
     Scanner input = new Scanner(System.in, "UTF-8");
     System.out.println("Wanna play a game? (Y / N) ?\n");
     String variableplay = input.nextLine();
+
+    if (variableplay.equals("N")) {
+        System.out.println("See you next time!.");
+  
+        // Invalid input interpretation
+      } else if (!variableplay.equals("N") && !variableplay.equals("Y")) {
+        System.out.println("Please follow the instructions.");
+  
