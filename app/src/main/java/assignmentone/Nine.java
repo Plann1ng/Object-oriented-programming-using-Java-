@@ -48,3 +48,15 @@ public class Nine {
           System.out.print("\nYour rolled " + playerchois);
           System.out.print(", in total you have " + fnlvalue + "\n");
 
+              // Instance where after the second roll user gets number higher than 9
+              if (fnlvalue > 9) {
+
+                System.out.println("\nfat\n");
+                // When the user does not cross the 9 limitation
+              } else {
+    
+                // User loses.
+                if (fnlvalue < comp) {
+                  System.out.println("\nComputer rolled " + comp);
+                  System.out.println("\nYou lost!\n");
+
