@@ -96,3 +96,9 @@ public class Nine {
                       System.out.print("Computer rolls again and gets " + comp2);
                       System.out.print(", Computer got " + computer + " in total.\n");
                       System.out.println("\nYou lost!\n");
+                    } else if (finalvalue > computer) {
+
+                        System.out.println("Computer rolled " + comp);
+                        System.out.print("Computer rolls again and gets " + comp2);
+                        System.out.print(", Computer got " + computer + " in total.");
+                        System.out.println("\nYou won!\n");
