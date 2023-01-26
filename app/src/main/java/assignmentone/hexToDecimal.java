@@ -19,7 +19,7 @@ public class Hextodecimal {
         int numbers = Character.getNumericValue(input.charAt(i));
         Double hex = (numbers) * Math.pow(16, input.length() - (1 + i));
         total += hex;
-        
+
         /* Takes the letters from the iteration and for each letter applying the 
          * algortihm with letter's corresponding numeric value
          */
@@ -29,4 +29,30 @@ public class Hextodecimal {
             Double intgra = 10 * Math.pow(16, input.length() - (1 + i));
             total += intgra;
             break;
+          case ('b'):
+            Double intgrb = 11 * Math.pow(16, input.length() - (1 + i));
+            total += intgrb;
+            break;
 
+          case ('c'):
+            Double intgrc = 12 * Math.pow(16, input.length() - (1 + i));
+            total += intgrc;
+            break;
+
+          case ('d'):
+            Double intgrd = 13 * Math.pow(16, input.length() - (1 + i));
+            total += intgrd;
+            break;
+
+          case ('e'):
+            Double intgre = 14 * Math.pow(16, input.length() - (1 + i));
+            total += intgre;
+            break;
+
+          default:
+            Double intgrf = 15 * Math.pow(16, input.length() - (1 + i));
+            total += intgrf;
+            break;
+        }
+      }
+    }
