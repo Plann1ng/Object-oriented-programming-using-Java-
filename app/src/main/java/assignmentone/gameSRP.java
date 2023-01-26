@@ -73,4 +73,25 @@ public class Gamesrp {
         System.out.println("It is a lose, computer had scissors!");
 
         comptr += 1;
+    
+    } else if (finalchoice == 3 && computer == 2) {
   
+        System.out.println("It is a win, computer had rock");
+
+        you += 1;
+  
+      } else if (finalchoice == 3 && computer == 3) {
+  
+        System.out.println("It is a draw, computer had paper also!");
+
+        draw += 1;
+        // Breaks the loop and projects the score
+      } else if (finalchoice == 0) {
+        System.out.print("Score:"  + you + " (you) ");
+        System.out.print(comptr + " (computer)" + draw + " (draw)");
+        choice.close();
+        break;
+      } 
+    }
+  }   
+}
