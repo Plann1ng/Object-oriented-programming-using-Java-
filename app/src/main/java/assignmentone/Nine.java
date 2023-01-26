@@ -174,3 +174,26 @@ public class Nine {
                             System.out.print("Computer rolls again and gets " + comp2);
                             System.out.print(", Computer got " + computer + " in total.");
                             System.out.println("\nYou won!\n");
+                                          // Draw
+            } else if (computer == player) {
+
+                System.out.println("Computer rolled " + comp);
+                System.out.print("Computer rolls again and gets " + comp2);
+                System.out.print(", Computer got " + computer + " in total.");
+                System.out.println("\nIt is a draw!y\n");
+  
+                input.close();
+              }
+              // Computer above 9
+            } else if (computer > 9) {
+  
+              System.out.println("Computer rolled " + comp);
+              System.out.println("Computer rolls again and gets " + comp2);
+              System.out.print("Computer got " + computer + " in total.");
+              System.out.println("\nYou won!\n");
+            }
+          }
+        }
+      }
+    }
+  }
