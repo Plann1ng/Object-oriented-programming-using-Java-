@@ -73,4 +73,16 @@ public class Nine {
   
               }
             }
+          // Instance when the computer does rolls less than 4 on the first rolled dice
+        } else if (comp <= 4) {
 
+            int playerchoice = dice.nextInt(1, 7);
+            int finalvalue = playerchoice + player;
+            int comp2 = dice.nextInt(1, 7);
+            int computer = comp + comp2;
+            System.out.print("\nYour rolled " + playerchoice);
+            System.out.print(", in total you have " + finalvalue + "\n");
+            // User rolls more than 9
+            if (finalvalue > 9) {
+  
+              System.out.println("\nfat!\n");
