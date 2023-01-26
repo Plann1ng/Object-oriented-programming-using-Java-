@@ -126,3 +126,28 @@ public class Nine {
     } else if (variableplay.equals("N")) {
 
         System.out.println("\nSee you next times!\n");
+
+        // No for second roll
+    } else if (userchoice.equals("N")) {
+        // Computer rolls 1 time
+        if (comp >= 4) {
+
+          System.out.print("\nYour rolled: " + player);
+          System.out.print(", in total you have " + player + "\n");
+          // User loses
+          if (player < comp) {
+
+            System.out.println("\nComputer rolled " + comp);
+            System.out.println("\nYou lost!\n");
+            // User wins
+          } else if (player > comp) {
+
+            System.out.println("Computer rolled " + comp);
+            System.out.println("\nYou won!\n");
+            // Draw
+          } else if (comp == player) {
+
+            System.out.println("Computer rolled " + comp);
+            System.out.println("\nIt is a draw!\n");
+
+          }
