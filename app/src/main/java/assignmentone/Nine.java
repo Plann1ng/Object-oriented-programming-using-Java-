@@ -60,3 +60,17 @@ public class Nine {
                   System.out.println("\nComputer rolled " + comp);
                   System.out.println("\nYou lost!\n");
 
+            // User wins
+            } else if (fnlvalue > comp) {
+
+                System.out.println("Computer rolled " + comp);
+                System.out.println("\nYou won!\n");
+                // Draw
+              } else if (comp == fnlvalue) {
+  
+                System.out.println("Computer rolled " + comp);
+                System.out.println("\nIt is a draw!\n");
+  
+              }
+            }
+
