@@ -25,3 +25,12 @@ public class Nine {
       } else if (!variableplay.equals("N") && !variableplay.equals("Y")) {
         System.out.println("Please follow the instructions.");
   
+        // Game starts
+      } else if (variableplay.equals("Y")) {
+          Random dice = new Random();
+          int player = dice.nextInt(1, 7);
+          int comp = dice.nextInt(1, 7);
+          System.out.println("\nYou rolled: " + player);
+          System.out.println("\nYou want to roll once more?\n");
+          String userchoice = input.nextLine();
+          // Second roll
