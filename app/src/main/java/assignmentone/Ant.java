@@ -53,3 +53,61 @@ public class Ant {
            * the
            * border. All of the else statements does update the location of the ant.
            */
+          if (direction == 1) {
+            steps++;
+            y++;
+            if (y > 7) {
+              y--;
+              /*
+               * steps -- to make the ant move neutral in until ant chooses another path to
+               * go.
+               */
+              steps--;
+  
+            }
+          }
+          if (direction == 2) {
+            steps++;
+            y--;
+            if (y < 0) {
+              y++;
+              steps--;
+            }
+          }
+          if (direction == 3) {
+            steps++;
+            x--;
+            if (x < 0) {
+              x++;
+              steps--;
+            }
+          }
+          if (direction == 4) {
+            steps++;
+            x++;
+            if (x > 7) {
+              x--;
+              steps--;
+            }
+          }
+          if (grid[x][y] == 0) {
+            /* increment value for every visited tile. */
+            grid[x][y] = 1;
+            visited++;
+          }
+          /*
+           * Condition will be filled if visited value reaches 64.
+           */
+          if (visited == tiles) {
+            break;
+          }
+  
+        }
+        totalsteps += steps;
+        System.out.println("Number of steps in simulation " + indx + ": " + steps);
+      }
+      averagesteps = totalsteps / 10;
+      System.out.println("Average amount of steps: " + averagesteps);
+    }
+  }
+  
