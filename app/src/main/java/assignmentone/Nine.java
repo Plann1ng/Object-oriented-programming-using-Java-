@@ -34,3 +34,17 @@ public class Nine {
           System.out.println("\nYou want to roll once more?\n");
           String userchoice = input.nextLine();
           // Second roll
+        if (!userchoice.equals("Y") && !userchoice.equals("N")) {
+
+             System.out.println("Please follow the instructions!");
+
+        } else if (userchoice.equals("Y")) {
+
+          // Cheking if the computer rolled 4 or more, if it is the case the computer
+          // won't do another roll
+        if (comp >= 4) {
+          int playerchois = dice.nextInt(1, 7);
+          int fnlvalue = playerchois + player;
+          System.out.print("\nYour rolled " + playerchois);
+          System.out.print(", in total you have " + fnlvalue + "\n");
+
