@@ -45,7 +45,7 @@ public class Gamesrp {
             System.out.println("It is a win, computer had paper");
     
             you += 1;
-                  /* Checks all possibilities when user choise is 2 and increments
+      /* Checks all possibilities when user choise is 2 and increments
        * the score correspondingly
        */
       } else if (finalchoice == 2 && computer == 1) {
@@ -59,3 +59,18 @@ public class Gamesrp {
         System.out.println("It is a draw, computer had rocks also!");
 
         draw += 1;
+      
+    } else if (finalchoice == 2 && computer == 3) {
+  
+        System.out.println("It is a lose, computer had paper!");
+
+        comptr += 1;
+      /* Checks all possibilities when user choise is 3 and increments
+       * the score correspondingly
+       */
+      } else if (finalchoice == 3 && computer == 1) {
+  
+        System.out.println("It is a lose, computer had scissors!");
+
+        comptr += 1;
+  
