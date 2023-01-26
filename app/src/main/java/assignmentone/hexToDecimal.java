@@ -56,3 +56,22 @@ public class Hextodecimal {
         }
       }
     }
+        // Turning double to integer
+        int fnlvalue = (int) total;
+
+        return fnlvalue;
+      }
+    
+      /** Main method for converting hexodecimal numbers. */
+    
+      public static void main(String[] args) {
+    
+        System.out.print("Enter a hex input: ");
+        Scanner s = new Scanner(System.in, "UTF-8");
+        String input = s.nextLine();
+    
+        System.out.print("Corresponding value to your input is: ");
+        System.out.println(hex2Decimal(input));
+        s.close();
+      }
+    }
