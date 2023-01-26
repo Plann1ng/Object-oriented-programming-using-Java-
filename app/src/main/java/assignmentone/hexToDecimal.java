@@ -19,3 +19,14 @@ public class Hextodecimal {
         int numbers = Character.getNumericValue(input.charAt(i));
         Double hex = (numbers) * Math.pow(16, input.length() - (1 + i));
         total += hex;
+        
+        /* Takes the letters from the iteration and for each letter applying the 
+         * algortihm with letter's corresponding numeric value
+         */
+      } else if (Character.isLetter(input.charAt(i))) {
+        switch (input.charAt(i)) {
+          case ('a'):
+            Double intgra = 10 * Math.pow(16, input.length() - (1 + i));
+            total += intgra;
+            break;
+
