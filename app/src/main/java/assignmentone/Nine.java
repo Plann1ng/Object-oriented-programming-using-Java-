@@ -112,3 +112,13 @@ public class Nine {
                 System.out.print(", Computer got " + computer + " in total.");
                 System.out.println("\nIt is a draw!y\n");
               }
+            // If the computer is above 9
+        } else {
+
+            System.out.println("Computer rolled " + comp);
+            System.out.println("Computer rolls again and gets " + comp2);
+            System.out.print("Computer got " + computer + " in total.");
+            System.out.println("\nYou won!\n");
+
+          }
+        }
