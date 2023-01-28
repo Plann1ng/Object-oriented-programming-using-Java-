@@ -56,3 +56,35 @@ public abstract class Animal {
       this.name = name;
     }
   }
+
+  public String getLatinName() {
+    return latinName;
+  }
+
+  /**
+   * Latin name setter flexibility focused which makes it possible
+   * to change Latin name of given object without need to make a new
+   * object from zero just to make it with different Latin name.
+   */
+  public void setLatinName(String latinName) {
+    if (latinName.isEmpty()) {
+      throw new IllegalArgumentException("Latin Name can not be empty!");
+    } else {
+      this.latinName = latinName;
+    }
+  }
+
+  public double getWeight() {
+    return weight;
+  }
+
+  /**
+   * Reusage focused weight setter method where weight can be setten under restrictions only.
+   */
+  public void setWeight(double weight) {
+    if (weight == 0) {
+      throw new IllegalArgumentException("Weight can not be 0!");
+    } else {
+      this.weight = weight;
+    }
+  }
