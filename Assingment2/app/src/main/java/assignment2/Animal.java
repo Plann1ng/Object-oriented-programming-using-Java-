@@ -40,3 +40,19 @@ public abstract class Animal {
       this.sound = sound;
     }
   }
+
+  public String getName() {
+    return name;
+  }
+
+  /**
+   * Name setter method with additional restrictive if statements which
+   * provides encapsulation.
+   */
+  public void setName(String name) {
+    if (name.isEmpty()) {
+      throw new IllegalArgumentException("Name can not be empty!");
+    } else {
+      this.name = name;
+    }
+  }
