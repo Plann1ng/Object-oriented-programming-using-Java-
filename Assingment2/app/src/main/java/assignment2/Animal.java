@@ -88,3 +88,18 @@ public abstract class Animal {
       this.weight = weight;
     }
   }
+
+  public abstract String makeSound();
+
+  /**
+   * Sound setter method where sound can be setten under restrictions only.
+   */
+  public void setSound(String sound) {
+    if (sound.isEmpty()) {
+      throw new IllegalArgumentException("Sound can not be empty!");
+    } else {
+      this.sound = sound;
+    }
+  }
+}
+
