@@ -31,3 +31,11 @@ public class Bird extends Animal {
   public void setMigrant(boolean isMigrant) {
     this.isMigrant = isMigrant;
   }
+
+  public boolean isCanFly() {
+    return canFly;
+  }
+
+  public void setCanFly(boolean canFly) {
+    this.canFly = canFly;
+  }
