@@ -23,3 +23,11 @@ public class Bird extends Animal {
       this.nestType = nestType;
     }
   }
+
+  public boolean isMigrant() {
+    return isMigrant;
+  }
+
+  public void setMigrant(boolean isMigrant) {
+    this.isMigrant = isMigrant;
+  }
