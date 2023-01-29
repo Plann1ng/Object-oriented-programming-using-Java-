@@ -23,3 +23,12 @@ public class Mammal extends Animal {
     }
     this.hasWinterfur = hasWinterfur;
   }
+
+  public String getFurColor() {
+    return furColor;
+  }
+
+  @Override
+  public String makeSound() {
+    return " says: " + sound;
+  }
