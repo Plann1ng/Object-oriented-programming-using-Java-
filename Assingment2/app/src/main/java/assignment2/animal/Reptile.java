@@ -24,3 +24,19 @@ public class Reptile extends Animal {
       this.habitat = habitat;
     }
   }
+    /* Did not added setPoisinous, because in real world if one Animal wasn't poisonous 
+    it can not be changed.
+   */
+  
+   public boolean isPoisonous() {
+    return isPoisonous;
+  }
+
+  @Override
+  public String makeSound() {
+    return " hizzles: " + sound;
+  }
+
+  public String getHabitat() {
+    return habitat;
+  }
