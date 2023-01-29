@@ -32,3 +32,19 @@ public class Mammal extends Animal {
   public String makeSound() {
     return " says: " + sound;
   }
+
+    /**
+   * Fur color setter under conditions to provide encapsulation within the object.
+   */
+  public void setFurColor(String furColor) {
+    if (furColor.isEmpty()) {
+      throw new IllegalArgumentException("FurColor can not be empty!");
+    } else {
+      this.furColor = furColor;
+    }
+  }
+
+  public boolean isWithWinterfur() {
+    return hasWinterfur;
+  }
+}
