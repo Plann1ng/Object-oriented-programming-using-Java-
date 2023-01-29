@@ -32,4 +32,20 @@ public class ComparableAnimal {
     animals.add(kingCobra);
     animals.add(saltWaterCroc);
     animals.add(kangaroo);
-    animals.add(mammoth);
+    animals.add(mammoth);    Collections.sort(animals);
+    for (int i = 0; i < animals.size(); i++) {
+      if (animals.get(i) instanceof Mammal) {
+        Mammal mammalInstance = (Mammal) animals.get(i);
+        System.out.println(animals.get(i).getLatinName() + "   " + mammalInstance.getFurColor());
+      }
+      if (animals.get(i) instanceof Bird) {
+        Bird birdInstance = (Bird) animals.get(i);
+        System.out.println(animals.get(i).getLatinName() + "   " + birdInstance.getNestType());
+      }
+      if (animals.get(i) instanceof Reptile) {
+        Reptile repInstance = (Reptile) animals.get(i);
+        System.out.println(animals.get(i).getLatinName() + "   " + repInstance.getHabitat());
+      }
+    }
+  }
+}
