@@ -40,3 +40,16 @@ public class Reptile extends Animal {
   public String getHabitat() {
     return habitat;
   }
+
+  
+  /**
+   * Habitat setter under specified conditions to have encapsulation.
+   */
+  public void setHabitat(String habitat) {
+    if (habitat.isEmpty()) {
+      throw new IllegalArgumentException("Habitat can not be empty!");
+    } else {
+      this.habitat = habitat;
+    }
+  }
+}
