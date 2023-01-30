@@ -106,3 +106,21 @@ public class Planet {
       noOfMoons++;
     }
   }
+
+    /**
+   * Basic method to return number of moons added to the ArrayList.
+   */
+  public Integer getNoOfMoons() {
+    return noOfMoons;
+  }
+
+  /**
+   * Moon setter method with restrictions.
+   */
+  public void setNoOfMoons(Integer moonNumber) {
+    if (moonNumber < 0) {
+      throw new IllegalArgumentException("Moon Number must be positive integer!");
+    } else {
+      this.noOfMoons = moonNumber;
+    }
+  }
