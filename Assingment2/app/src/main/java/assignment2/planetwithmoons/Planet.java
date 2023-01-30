@@ -144,3 +144,19 @@ public class Planet {
       this.aphelion = aphelion;
     }
   }
+
+  public Integer getPerihelion() {
+    return perihelion;
+  }
+
+  /**
+   * setPerihelion method provides flexibility to adjust Planet perihelion.
+   */
+  public void setPerihelion(Integer perihelion) {
+    if (perihelion <= 0) {
+      throw new IllegalArgumentException("Perihelion must be positive integer!");
+    } else {
+      this.perihelion = perihelion;
+    }
+  }
+}
