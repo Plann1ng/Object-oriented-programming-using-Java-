@@ -12,3 +12,14 @@ public class Planet {
 
   public Planet() {
   }
+
+    /**
+   * Planet object.
+   */
+  public Planet(String name, Integer position, Integer noOfMoons, Integer aphelion,
+      Integer perihelion) {
+    if (name.isEmpty()) {
+      throw new IllegalArgumentException("Name can not be empty!");
+    } else {
+      this.name = name;
+    }
