@@ -35,3 +35,16 @@ public class Planet {
       } else {
         this.noOfMoons = noOfMoons;
       }
+
+      if (aphelion <= 0) {
+        throw new IllegalArgumentException("Aphelion must be positive integer!");
+      } else {
+        this.aphelion = aphelion;
+      }
+  
+      if (perihelion <= 0) {
+        throw new IllegalArgumentException("Perihelion must be positive integer!");
+      } else {
+        this.perihelion = perihelion;
+      }
+    }
