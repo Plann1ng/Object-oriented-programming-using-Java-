@@ -51,3 +51,34 @@ public class Planet {
       this.perihelion = perihelion;
     }
   }
+
+  public String getName() {
+    return name;
+  }
+
+  /**
+   * Flexibility related method to change Planet object's name under conditions.
+   */
+  public void setName(String name) {
+    if (name.isEmpty()) {
+      throw new IllegalArgumentException("Name can not be empty!");
+    } else {
+      this.name = name;
+    }
+  }
+
+  public Integer getPosition() {
+    return position;
+  }
+
+  /**
+   * Flexibility focused position method for Planet object.
+   */
+  public void setPosition(Integer position) {
+    if (position <= 0 || position >= 8) {
+      throw new IllegalArgumentException("Position must be positive integer between 0 and 8");
+    } else {
+      this.position = position;
+    }
+  }
+
