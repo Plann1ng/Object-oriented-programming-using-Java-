@@ -23,3 +23,15 @@ public class Planet {
     } else {
       this.name = name;
     }
+
+    if (position <= 0 || position >= 8) {
+        throw new IllegalArgumentException("Position must be positive integer between 0 and 8");
+      } else {
+        this.position = position;
+      }
+  
+      if (noOfMoons < 0) {
+        throw new IllegalArgumentException("Moons can not be negative number!");
+      } else {
+        this.noOfMoons = noOfMoons;
+      }
