@@ -82,3 +82,27 @@ public class Planet {
     }
   }
 
+  /**
+   * Method that @return safeArray, which is copy of the ArrayList in order to not return Arraylist
+   * and get stronger encapsulation.
+   */
+  public Moons[] getMoons() {
+    Moons[] safeArray = new Moons[moons.size()];
+    for (int i = 0; i < moons.size(); i++) {
+      safeArray[i] = moons.get(i);
+    }
+    return safeArray;
+  }
+
+  /**
+   * Planet method that takes Moon objects and they are being added to 
+   * the Arraylist of the Planet object.
+   */
+  public void addMoon(Moons newMoon) {
+    if (newMoon.getName().isEmpty()) {
+      throw new IllegalArgumentException("Moon name can not be empty");
+    } else {
+      moons.add(newMoon);
+      noOfMoons++;
+    }
+  }
