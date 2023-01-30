@@ -124,3 +124,23 @@ public class Planet {
       this.noOfMoons = moonNumber;
     }
   }
+
+  
+  /**
+   * Returning Aphelion.
+   */
+  public Integer getAphelion() {
+    return aphelion;
+  }
+
+  /**
+   * setAphelion Method which gives possiblity to change the Aphelion in
+   * case that the Aphelion size in Real World becomes bigger or smaller.
+   */
+  public void setAphelion(Integer aphelion) {
+    if (aphelion <= 0) {
+      throw new IllegalArgumentException("Aphelion must be positive integer!");
+    } else {
+      this.aphelion = aphelion;
+    }
+  }
