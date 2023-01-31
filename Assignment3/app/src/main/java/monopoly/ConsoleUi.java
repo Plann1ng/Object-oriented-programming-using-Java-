@@ -50,3 +50,18 @@ public class ConsoleUi {
   public void playerFundsDeduced(String name, int cost) {
     addMessage(name, "funds deduced with " + cost);
   }
+
+    /**
+   * Adds an insufficient funds message for a player.
+   */
+  public void playerUnableToPay(String name, int cost) {
+    addMessage(name, "not enough funds to pay " + cost);
+  }
+
+  /**
+   * Adds a received funds message.
+   */
+  public void playerReceivedFunds(String name, int sum) {
+    addMessage(name, "received $" + sum);
+  }
+
