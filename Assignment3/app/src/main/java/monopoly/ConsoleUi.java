@@ -178,3 +178,19 @@ public class ConsoleUi {
     }
   }
 
+    /**
+   * Takes user input if computer players are wished or not.
+   */
+
+   public String promtForBot() {
+    System.out.print("If you want to play with bots tap [1], otherwise"
+                      + "tap 'Enter' to continue without bots: ");
+    try {
+      BufferedReader reader = new BufferedReader(new InputStreamReader(System.in, Charset.defaultCharset().name()));
+      return reader.readLine();
+    } catch (IOException e) {
+      e.printStackTrace();
+      return "";
+    }
+  }
+
