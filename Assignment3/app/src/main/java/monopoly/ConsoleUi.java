@@ -221,3 +221,28 @@ public class ConsoleUi {
     messages.append("\tPlayer " + playerName + ":" + msg);
   }
 
+    /**
+   * Prompts the user for some input.
+   */
+  public Action promptForAction(String playerName) {
+    System.out.println("It is your turn: " + playerName);
+    System.out.print("r to roll dice, b to buy property");
+
+    int c;
+
+    do {
+      c = getInputChar();
+    } while (!(c == 'r' || c == 'b'));
+
+    switch (c) {
+      case 'r':
+        return Action.ROLL;
+      case 'b':
+        return Action.BUY;
+      default:
+        break;
+    }
+
+    return Action.None;
+  }
+
