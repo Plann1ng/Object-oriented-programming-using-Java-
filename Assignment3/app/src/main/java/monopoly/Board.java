@@ -1,4 +1,4 @@
-
+package monopoly;
 /**
  * Constructs and holds the game tiles.
  * This could be expanded to hold the game cards etc.
@@ -23,4 +23,24 @@ public class Board {
   
       start = create(streets);
       
+    }
+
+    protected Tile create(String [] streets) {
+        Tile start = new Start();
+        Tile n = start;
+        for (String streetName : streets) {
+          if (streetName != null) {
+            n = new Property(n, streetName);
+          } else {
+            n = new Free(n);
+          }
+        }
+    
+        return start;
+      }
+    
+    
+      public Tile getStartTile() {
+        return start;
+      }
     }
