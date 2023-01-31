@@ -122,3 +122,23 @@ public class ConsoleUi {
     return ret;
   }
 
+  
+  private void clearConsole() {
+    for (int i = 0; i < 30; i++) {
+      System.out.println();
+    }
+  }
+
+  /**
+   * Clears the console and prints the current game state and messages.
+   * Finally clears the messages and game state.
+   */
+  public void printState() {
+    clearConsole();
+
+    System.out.println(getGameState());
+    System.out.println(getMessages());
+    clearMessages();
+    clearGameState();
+  }
+
