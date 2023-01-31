@@ -65,3 +65,23 @@ public class ConsoleUi {
     addMessage(name, "received $" + sum);
   }
 
+    /**
+   * Adds a joined message.
+   */
+  public void playerJoined(String name) {
+    addMessage(name, "joined the game");
+  }
+
+  /**
+   * Adds the whole game state to be drawn.
+   */
+  public void addGameState(Tile start, Iterable<Player> players) {
+    Tile t = start;
+
+    do {
+      addTile(t, players);
+
+      t = t.getNext();
+    } while (t != start);
+  }
+
