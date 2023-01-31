@@ -158,3 +158,23 @@ public class ConsoleUi {
     }
   }
 
+  
+  /**
+   * Gives name to user defined amount of Bots and returns list.
+   */
+
+   public ArrayList<String> forBots() throws NumberFormatException, IOException {
+    System.out.print("How many bots you would like to add? ");
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    int numberOfBots = Integer.parseInt(br.readLine());
+    if (numberOfBots > 0 && numberOfBots < 7) {
+      ArrayList<String> bots = new ArrayList<>();
+      for (int i = 0; i < numberOfBots; i++) {
+        bots.add(("Bot " + (i + 1)));
+      }
+      return bots;
+    } else {
+      throw new IllegalArgumentException("Please choose integer between 1 - 7! ");
+    }
+  }
+
