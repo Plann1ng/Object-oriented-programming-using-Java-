@@ -210,3 +210,14 @@ public class ConsoleUi {
 
   }
 
+  private String getPlayerString(Player p) {
+    return p.getName() + " ($" + p.getFunds() + "$)";
+  }
+
+  private void addMessage(String playerName, String msg) {
+    if (messages.length() > 0) {
+      messages.append(System.lineSeparator());
+    }
+    messages.append("\tPlayer " + playerName + ":" + msg);
+  }
+
