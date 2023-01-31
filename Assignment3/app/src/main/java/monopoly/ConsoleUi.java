@@ -194,3 +194,19 @@ public class ConsoleUi {
     }
   }
 
+    /**
+   * Represents the actions a player can perform.
+   */
+  public void gameOver(Iterable<Player> players) {
+    System.out.println("Game Over");
+    ArrayList<Player> orderedPlayers = new ArrayList<>();
+    players.forEach(p -> orderedPlayers.add(p));
+
+    orderedPlayers.sort((p1, p2) -> p2.getFunds() - p1.getFunds());
+
+    for (Player p : orderedPlayers) {
+      System.out.println(getPlayerString(p));
+    }
+
+  }
+
