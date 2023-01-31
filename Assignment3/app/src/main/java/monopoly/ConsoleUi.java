@@ -36,3 +36,17 @@ public class ConsoleUi {
   public void playerBuysProperty(String name, String propertyName) {
     addMessage(name, "bought " + propertyName);
   }
+
+    /**
+   * Adds a rent payment message.
+   */
+  public void playerPaysRentFor(String name, String propertyDesc, int rent) {
+    addMessage(name, "Pays rent for: " + propertyDesc + "($" + rent + ")");
+  }
+
+  /**
+   * Adds a funds deduced message.
+   */
+  public void playerFundsDeduced(String name, int cost) {
+    addMessage(name, "funds deduced with " + cost);
+  }
