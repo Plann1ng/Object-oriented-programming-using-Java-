@@ -85,3 +85,26 @@ public class ConsoleUi {
     } while (t != start);
   }
 
+    /**
+   * Adds a game tile to the current game state.
+   */
+  private void addTile(Tile t, Iterable<Player> players) {
+    StringBuffer tileStr = new StringBuffer();
+
+    tileStr.append(addSpaces(30, t.toString()));
+
+    for (Player p : players) {
+      if (t.isOnTile(p)) {
+        tileStr.append("\t");
+        tileStr.append(getPlayerString(p));
+      }
+    }
+    tileStr.append(System.lineSeparator());
+
+    gameState.append(tileStr);
+  }
+
+  protected String getGameState() {
+    return gameState.toString();
+  }
+
