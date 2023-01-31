@@ -108,3 +108,17 @@ public class ConsoleUi {
     return gameState.toString();
   }
 
+  protected void clearGameState() {
+    gameState = new StringBuffer();
+  }
+
+  private String addSpaces(int max, String str) {
+    String ret = str;
+
+    while (ret.length() < max) {
+      ret = " " + ret;
+    }
+
+    return ret;
+  }
+
