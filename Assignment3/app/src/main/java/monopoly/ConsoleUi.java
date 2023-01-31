@@ -142,3 +142,19 @@ public class ConsoleUi {
     clearGameState();
   }
 
+  
+  /**
+   * Prompts for and returns a new players name.
+   */
+  public String promptForNewPlayerName() {
+    System.out.print("Player name (empty when done): ");
+
+    try {
+      BufferedReader reader = new BufferedReader(new InputStreamReader(System.in, Charset.defaultCharset().name()));
+      return reader.readLine();
+    } catch (IOException e) {
+      e.printStackTrace();
+      return "";
+    }
+  }
+
