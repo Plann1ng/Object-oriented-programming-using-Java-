@@ -22,3 +22,17 @@ public class ConsoleUi {
     BUY,
     None
   }
+
+    /**
+   * Adds a player movement message.
+   */
+  public void playerMoves(String name, int d1, int d2) {
+    addMessage(name, " moves " + d1 + " + " + d2 + " steps");
+  }
+
+  /**
+   * Adds a property bought message.
+   */
+  public void playerBuysProperty(String name, String propertyName) {
+    addMessage(name, "bought " + propertyName);
+  }
